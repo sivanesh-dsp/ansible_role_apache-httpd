@@ -25,7 +25,7 @@ How to Use:
 
 2. Add the role to your Ansible playbook:-
 
-```
+```javascript
 - hosts: all
   become: true
   roles:

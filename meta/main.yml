@@ -1,7 +1,7 @@
 galaxy_info:
   author: Sivanesh B
   description: Installing Apache2 on managed nodes and copying an HTML file to the managed node.
-  company: your company (optional)
+  company:
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -42,6 +42,7 @@ galaxy_info:
   galaxy_tags:
     - apache
     - httpd
+    - Installation
 
 dependencies:
   []
