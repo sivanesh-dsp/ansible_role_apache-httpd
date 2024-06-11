@@ -1,38 +1,55 @@
-Role Name
-=========
+Ansible Role: ansible_role_apache
 
-A brief description of the role goes here.
+This Ansible role installs the Apache HTTP server (httpd) on managed nodes and copies a basic HTML file to the web server document root.
 
-Requirements
-------------
+Features:
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+- Installs Apache2 package
+- Copies index.html file to /var/www/html (only for nodes in the webservers group)
 
-Role Variables
---------------
+Requirements:
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+- Ansible version 2.1 or later
 
-Dependencies
-------------
+Role Variables:
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+- None currently defined.
 
-Example Playbook
-----------------
+Dependencies:
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+- None currently defined.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+How to Use:
 
-License
--------
+1. Clone the role repository: git clone https://github.com/your_username/ansible_role_apache.git
 
-BSD
+2. Add the role to your Ansible playbook:-
 
-Author Information
-------------------
+```
+- hosts: all
+  become: true
+  roles:
+    - role: apache_playbook
+```
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Replace all with the target host group if you're not deploying to all hosts.
+
+3. (Optional) Target specific hosts for HTML file:
+
+   - Create a group named webservers in your Ansible inventory and add the desired nodes to it.
+   - The index.html file will only be copied to these nodes.
+
+4. Run the playbook:
+
+```javascript
+  ansible-playbook -i inventory.ini <your-playbook>.yaml
+```
+
+Testing:
+It's recommended to write unit tests for your role to ensure its functionality. You can use tools like Molecule or the ansible-test module.
+
+Contributing:
+We welcome contributions to improve this role. Feel free to submit pull requests with bug fixes, enhancements, or additional features.
+
+License:
+This role is licensed under the MIT License.
