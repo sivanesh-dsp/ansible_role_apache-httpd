@@ -1,4 +1,4 @@
-Ansible Role: ansible_role_apache
+Ansible Role: ansible_role_apache-httpd
 
 This Ansible role installs the Apache HTTP server (httpd) on managed nodes and copies a basic HTML file to the web server document root.
 
