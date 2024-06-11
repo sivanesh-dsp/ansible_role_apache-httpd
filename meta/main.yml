@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: httpd
   author: Sivanesh B
   description: Installing Apache2 on managed nodes and copying an HTML file to the managed node.
 
