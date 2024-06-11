@@ -29,7 +29,7 @@ How to Use:
 - hosts: all
   become: true
   roles:
-    - role: apache_playbook
+    - sivanesh-dsp.httpd
 ```
 
 Replace all with the target host group if you're not deploying to all hosts.
